@@ -364,10 +364,15 @@ with st.sidebar:
         ],
         default_index=0,
         styles={
-            "container":         {"background-color": "transparent"},
-            "nav-link":          {"font-size": "14px", "text-align": "left", "color": "rgba(255,255,255,0.80)", "border-radius": "8px"},
-            "nav-link-selected": {"background-color": "#2F5C85", "color": "white", "font-weight": "700"},
-            "icon":              {"color": "#61A3BB"},
+            "container":{
+                 "background-color": "rgba(255,255,255,0.05)"
+                 "border-radius": "14px",
+                 "padding": "8px",
+                 "border": "1px solid rgba(97,163,187,0.15)",
+                 },
+            "nav-link":{"font-size": "15px","font-weight": "500", "font-family": "'DM Sans', sans-serif", "text-align": "left", "color": "rgba(255,255,255,0.75)","border-radius": "10px","padding": "12px 16px","margin": "2px 0",},
+            "nav-link-selected": {"background-color": "#2F5C85", "color": "white", "font-weight": "700"  "border-radius": "10px",},
+            "icon": {"color": "#61A3BB""font-size": "18px",},
         },
     )
 
