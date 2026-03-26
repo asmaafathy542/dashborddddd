@@ -1128,8 +1128,8 @@ elif selected == "Anomaly Detection":
             sev_counts = pd.DataFrame(anomalies)["severity"].value_counts().reset_index()
             sev_counts.columns = ["Severity", "Count"]
             fig_sev = px.pie(sev_counts, values="Count", names="Severity", hole=0.55,
-                            color_discrete_map={"High": "#1D3143", "Medium": "#619FB8"},
-                             template=TEMPLATE)
+                color_discrete_sequence=["#1D3143", "#619FB8"],
+                template=TEMPLATE)
             st.plotly_chart(fig_sev, use_container_width=True)
 
         # ── Anomaly Heatmap per Cluster ───────────────────────────
