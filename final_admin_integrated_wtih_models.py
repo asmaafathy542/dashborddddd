@@ -542,7 +542,7 @@ elif selected == "Places Analytics":
         st.subheader("🏆 Most Visited Places (Top 8)")
         top_v = df_places.nlargest(8, "Visits")
         fig_tv = px.bar(top_v, x="Visits", y="Name", orientation="h",
-                        color="Visits", color_continuous_scale=[[0,"#E8EFF5"],[1,"#2F5C85"]],
+                        color="Visits",color_continuous_scale=[[0,"#65797E"],[0.5,"#619FB8"],[1,"#1D3143"]],
                         template=TEMPLATE)
         fig_tv.update_layout(yaxis={"categoryorder":"total ascending"})
         st.plotly_chart(fig_tv, use_container_width=True)
