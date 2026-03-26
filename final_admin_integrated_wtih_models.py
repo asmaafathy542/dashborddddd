@@ -487,7 +487,7 @@ if selected == "Overview":
     with col_c:
         st.subheader("🛡️ Place Status Distribution")
         fig_st = px.pie(df_places, names="Status", hole=0.6,
-                        color_discrete_sequence=["#2F5C85","#EF4444","#65797E"],
+                        color_discrete_sequence=["#2F5C85","#61A3BB","#65797E"],
                         template=TEMPLATE)
         st.plotly_chart(fig_st, use_container_width=True)
 
@@ -534,7 +534,7 @@ elif selected == "Places Analytics":
         cat_counts = df_places["Category"].value_counts().reset_index()
         cat_counts.columns = ["Category","Count"]
         fig_cc = px.bar(cat_counts, x="Category", y="Count",
-                        color="Count", color_continuous_scale=[[0,"#E8EFF5"],[1,"#2F5C85"]],
+                        color="Count", color_continuous_scale=[[0,"#65797E"],[0.5,"#619FB8"],[1,"#1D3143"]],
                         text_auto=True, template=TEMPLATE)
         st.plotly_chart(fig_cc, use_container_width=True)
 
