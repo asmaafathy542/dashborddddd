@@ -365,7 +365,7 @@ with st.sidebar:
         default_index=0,
         styles={
             "container": {
-                 "background-color": "rgba(255,255,255,0.05)",
+                 "background-color": "#1D3143",
                  "border-radius": "14px",
                  "padding": "8px",
                  "border": "1px solid rgba(97,163,187,0.15)",
