@@ -872,7 +872,7 @@ elif selected == "Category Analytics":
         ar = df_places.groupby("Category")["Rating"].mean().reset_index()
         ar["Rating"] = ar["Rating"].round(2)
         fig_ar = px.bar(ar, x="Category", y="Rating",
-                        color="Rating", color_continuous_scale="RdYlGn"color_continuous_scale=[[0,"#65797E"],[0.5,"#619FB8"],[1,"#1D3143"]],
+                        color="Rating", color_continuous_scale=[[0,"#65797E"],[0.5,"#619FB8"],[1,"#1D3143"]],
                         text_auto=".2f", template=TEMPLATE)
         fig_ar.update_layout(yaxis_range=[0, 5])
         st.plotly_chart(fig_ar, use_container_width=True)
