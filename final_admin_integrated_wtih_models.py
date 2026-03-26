@@ -714,7 +714,7 @@ elif selected == "Reviews":
         st.subheader("😊 Positive vs Negative Ratio")
         fig_pie = px.pie(values=[75, 25], names=["Positive","Negative"],
                          hole=0.55,
-                         color_discrete_sequence=["#2F5C85","#EF4444"],
+                         color_discrete_sequence=["#2F5C85","#65797E"],
                          template=TEMPLATE)
         st.plotly_chart(fig_pie, use_container_width=True)
 
@@ -731,7 +731,7 @@ elif selected == "Reviews":
         avg_c = df_places.groupby("Category")["Rating"].mean().reset_index()
         avg_c["Rating"] = avg_c["Rating"].round(2)
         fig_rc = px.bar(avg_c, x="Category", y="Rating",
-                        color="Rating", color_continuous_scale="RdYlGn",
+                        color="Rating", color_continuous_scale=[[0,"#65797E"],[0.5,"#619FB8"],[1,"#1D3143"]],
                         text_auto=".2f", template=TEMPLATE)
         fig_rc.update_layout(yaxis_range=[0, 5])
         st.plotly_chart(fig_rc, use_container_width=True)
