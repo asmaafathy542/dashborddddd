@@ -372,7 +372,7 @@ with st.sidebar:
                  },
             "nav-link":{"font-size": "15px","font-weight": "500", "font-family": "'DM Sans', sans-serif", "text-align": "left", "color": "rgba(255,255,255,0.75)","border-radius": "10px","padding": "12px 16px","margin": "2px 0",},
             "nav-link-selected": {"background-color": "#2F5C85", "color": "white", "font-weight": "700",  "border-radius": "10px",},
-            "icon": {"color": "#61A3BB""font-size": "18px",},
+            "icon": {"color": "#61A3BB" , "font-size": "18px",},
         },
     )
 
