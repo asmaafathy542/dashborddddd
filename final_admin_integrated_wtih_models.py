@@ -1137,7 +1137,7 @@ elif selected == "Anomaly Detection":
             st.subheader("🗺️ Anomaly Activity per Cluster")
             sum_df = pd.DataFrame(summary)
             fig_cl = px.bar(sum_df, x="cluster", y="total_anomalies",
-                            color="total_anomalies", color_continuous_scale=[[0,"#C8D9E6"],[1,"#1D3143"]]
+                            color="total_anomalies", color_continuous_scale=[[0,"#C8D9E6"],[1,"#1D3143"]],
                             text_auto=True, template=TEMPLATE,
                             labels={"cluster": "Cluster", "total_anomalies": "Total Anomalies"})
             fig_cl.update_xaxes(type="category")
