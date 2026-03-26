@@ -48,7 +48,7 @@ st.markdown("""
     section[data-testid="stSidebar"] .stDateInput input {
         background: rgba(97,159,184,0.12) !important;
         border: 1px solid rgba(97,159,184,0.3) !important;
-        color: white !important;
+        color: #1D3143 !important;
         border-radius: 8px !important;
     }
 
