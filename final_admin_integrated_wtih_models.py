@@ -562,7 +562,7 @@ elif selected == "Places Analytics":
         avg_c = df_places.groupby("Category")["Rating"].mean().reset_index()
         avg_c["Rating"] = avg_c["Rating"].round(2)
         fig_rc = px.bar(avg_c, x="Category", y="Rating",
-                        color="Rating", color_continuous_scale="RdYlGn",
+                        color="Rating",color_continuous_scale=[[0,"#65797E"],[0.5,"#619FB8"],[1,"#1D3143"]],
                         text_auto=".2f", template=TEMPLATE)
         fig_rc.update_layout(yaxis_range=[0, 5])
         st.plotly_chart(fig_rc, use_container_width=True)
