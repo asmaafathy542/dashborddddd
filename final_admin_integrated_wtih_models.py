@@ -192,6 +192,14 @@ st.markdown("""
     .stInfo    { background: rgba(97,163,187,0.1) !important; border-left-color: var(--brand-teal) !important; }
     .stWarning { background: rgba(245,158,11,0.08) !important; }
     .stError   { background: rgba(239,68,68,0.08) !important; }
+            
+    /* ── Date picker selected color ── */
+[data-baseweb="calendar"] [aria-selected="true"] {
+    background-color: #2F5C85 !important;
+}
+[data-baseweb="calendar"] [data-selected="true"] {
+    background-color: #2F5C85 !important;
+}
     </style>
 """, unsafe_allow_html=True)
 
