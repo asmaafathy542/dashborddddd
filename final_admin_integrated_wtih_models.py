@@ -1128,7 +1128,7 @@ elif selected == "Anomaly Detection":
             sev_counts = pd.DataFrame(anomalies)["severity"].value_counts().reset_index()
             sev_counts.columns = ["Severity", "Count"]
             fig_sev = px.pie(sev_counts, values="Count", names="Severity", hole=0.55,
-                             color_discrete_map={"High": "#C0392B", "Medium": "#619FB8"},
+                            color_discrete_map={"High": "#1D3143", "Medium": "#619FB8"},
                              template=TEMPLATE)
             st.plotly_chart(fig_sev, use_container_width=True)
 
@@ -1137,7 +1137,7 @@ elif selected == "Anomaly Detection":
             st.subheader("🗺️ Anomaly Activity per Cluster")
             sum_df = pd.DataFrame(summary)
             fig_cl = px.bar(sum_df, x="cluster", y="total_anomalies",
-                            color="total_anomalies", color_continuous_scale=[[0,"#FFF0E8"],[1,"#C0392B"]],
+                            color="total_anomalies", color_continuous_scale=[[0,"#C8D9E6"],[1,"#1D3143"]]
                             text_auto=True, template=TEMPLATE,
                             labels={"cluster": "Cluster", "total_anomalies": "Total Anomalies"})
             fig_cl.update_xaxes(type="category")
