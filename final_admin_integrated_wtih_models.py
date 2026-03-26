@@ -1276,7 +1276,9 @@ elif selected == "Location Logic":
         st.subheader("🏷️ Places per District per Category")
         dcat = df_places.groupby(["District","Category"]).size().reset_index(name="Count")
         fig_dcat = px.bar(dcat, x="District", y="Count", color="Category",
-                          barmode="stack", template=TEMPLATE)
+                  barmode="stack",
+                  color_discrete_sequence=["#1D3143","#2F5C85","#619FB8","#61A3BB","#65797E"],
+                  template=TEMPLATE)
         fig_dcat.update_xaxes(tickangle=30)
         st.plotly_chart(fig_dcat, use_container_width=True)
 
