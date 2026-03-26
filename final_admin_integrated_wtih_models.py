@@ -820,7 +820,7 @@ elif selected == "Chatbot":
                          var_name="Status", value_name="Count")
         fig_ru = px.bar(tcp_m, x="Place", y="Count", color="Status",
                         barmode="stack",
-                        color_discrete_map={"Resolved":"#2F5C85","Unresolved":"#EF4444"},
+                        color_discrete_map={"Resolved":"#2F5C85","Unresolved":"#65797E"},
                         template=TEMPLATE)
         fig_ru.update_xaxes(tickangle=30)
         st.plotly_chart(fig_ru, use_container_width=True)
@@ -863,7 +863,7 @@ elif selected == "Category Analytics":
         st.subheader("❤️ Total Saves per Category")
         cs = df_places.groupby("Category")["Saves"].sum().reset_index()
         fig_cs = px.pie(cs, values="Saves", names="Category", hole=0.5,
-                        color_discrete_sequence=px.colors.qualitative.Set3,
+                       color_discrete_sequence=["#1D3143","#2F5C85","#619FB8","#61A3BB","#65797E"],
                         template=TEMPLATE)
         st.plotly_chart(fig_cs, use_container_width=True)
 
@@ -872,7 +872,7 @@ elif selected == "Category Analytics":
         ar = df_places.groupby("Category")["Rating"].mean().reset_index()
         ar["Rating"] = ar["Rating"].round(2)
         fig_ar = px.bar(ar, x="Category", y="Rating",
-                        color="Rating", color_continuous_scale="RdYlGn",
+                        color="Rating", color_continuous_scale="RdYlGn"color_continuous_scale=[[0,"#65797E"],[0.5,"#619FB8"],[1,"#1D3143"]],
                         text_auto=".2f", template=TEMPLATE)
         fig_ar.update_layout(yaxis_range=[0, 5])
         st.plotly_chart(fig_ar, use_container_width=True)
