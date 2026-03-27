@@ -1157,7 +1157,7 @@ elif selected == "Anomaly Detection":
 
         for a in anomalies:
             col_info, col_act = st.columns([5, 1])
-            severity_badge = "🔵" if a["severity"] == "High" else "🩵"
+            severity_badge = "🔵" if a["severity"] == "High" else "⚫"
             with col_info:
                 st.markdown(
                     f"{severity_badge} **{a['anomaly_type'].replace('_', ' ').title()}** "
