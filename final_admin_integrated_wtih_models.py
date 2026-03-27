@@ -1136,7 +1136,7 @@ elif selected == "Anomaly Detection":
             sev_counts = pd.DataFrame(anomalies)["severity"].value_counts().reset_index()
             sev_counts.columns = ["Severity", "Count"]
             fig_sev = px.pie(sev_counts, values="Count", names="Severity", hole=0.55,
-                color_discrete_sequence=["#1D3143", "#619FB8"],
+                color_discrete_sequence=[ "#619FB8" , "#1D3143"],
                 template=TEMPLATE)
             st.plotly_chart(fig_sev, use_container_width=True)
 
