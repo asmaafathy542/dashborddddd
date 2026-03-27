@@ -1108,8 +1108,8 @@ elif selected == "Anomaly Detection":
 
     a1, a2, a3, a4 = st.columns(4)
     a1.metric("Total Anomalies",     total_anomalies)
-    a2.metric("⚫ High Severity",    high_count)
-    a3.metric("🔵 Medium Severity",  medium_count)
+    a2.metric("🔵 High Severity",    high_count)
+    a3.metric("⚫  Medium Severity",  medium_count)
     a4.metric("Most Affected Cluster", f"Cluster {top_district}" if summary else "N/A")
 
     st.markdown("<br>", unsafe_allow_html=True)
