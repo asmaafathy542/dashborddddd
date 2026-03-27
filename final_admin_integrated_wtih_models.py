@@ -36,6 +36,18 @@ st.markdown("""
 
     /* ── Page background ── */
     .main, .block-container { background-color: var(--bg-page) !important; }
+    /* ── Fix content width when sidebar collapses ── */
+.block-container {
+    background-color: var(--bg-page) !important;
+    max-width: 100% !important;
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+}
+
+/* Remove Streamlit default max-width constraint */
+[data-testid="stAppViewContainer"] > .main {
+    max-width: 100% !important;
+}
     html, body, [class*="css"] { font-family: 'DM Sans', sans-serif; }
 
     /* ── Sidebar ── */
