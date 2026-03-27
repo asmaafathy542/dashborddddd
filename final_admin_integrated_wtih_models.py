@@ -1125,7 +1125,7 @@ elif selected == "Anomaly Detection":
             type_counts = pd.DataFrame(anomalies)["anomaly_type"].value_counts().reset_index()
             type_counts.columns = ["Type", "Count"]
             fig_at = px.bar(type_counts, x="Count", y="Type", orientation="h",
-                            color="Count", color_continuous_scale=[[1,"#1D3143"] ,[0,"#C8D9E6"]],
+                            color="Count", color_continuous_scale=[[0,"#C8D9E6"],[1,"#1D3143"]],
                             text_auto=True, template=TEMPLATE)
             fig_at.update_layout(yaxis={"categoryorder": "total ascending"})
             st.plotly_chart(fig_at, use_container_width=True)
