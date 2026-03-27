@@ -1298,11 +1298,11 @@ elif selected == "Location Logic":
             urgency = opp["urgency"]
             msg     = opp["message"]
             if urgency == "High":
-                st.error(f"🔴 {msg}")
+                st.error(f"🔵 {msg}")
             elif urgency == "Medium":
-                st.warning(f"🟡 {msg}")
+                st.warning(f"🔘 {msg}")
             else:
-                st.info(f"🔵 {msg}")
+                st.info(f"🔹 {msg}")
     else:
         st.caption("⚠️ Using fallback data — API unavailable")
         st.success("📍 'New Beni Suef' has high search volume for Pharmacies but 0 registered.")
